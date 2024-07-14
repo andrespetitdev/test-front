@@ -1,0 +1,77 @@
+ 
+ .barra {
+    background: #303241;
+    height: 60px;
+    border-bottom: 1px solid #303241;
+    color: white;
+    position: relative;
+  }
+  
+   .barra-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    height: 100%;
+    position: relative;
+  }
+  
+   .menu-button {
+    font-size: 24px;
+    cursor: pointer;
+    display: none; 
+  }
+  
+   .select-container {
+    flex-grow: 1;
+    justify-content: center;
+  }
+  
+   .select-container.hidden {
+    display: none;
+  }
+  
+   .menu-desplegable {
+    background: #303241;
+    color: white;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    display: none; 
+    z-index: 10;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+   .menu-desplegable.abierto {
+    display: flex;
+  }
+  
+   @media (max-width: 750px) {
+    .menu-button {
+      display: block;
+    }
+  }
+  
+  
+  @media (min-width: 600px) and (max-width: 750px) {
+    .select-container {
+      display: none; 
+    }
+    .menu-desplegable.abierto {
+      display: flex;  
+    }
+  }
+  
+  
+  @media (max-width: 600px) {
+    .select-container {
+      display: none;  
+    }
+    .menu-desplegable.abierto {
+      display: flex;  
+    }
+  }
+  
